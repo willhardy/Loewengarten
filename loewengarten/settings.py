@@ -10,18 +10,15 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-     ('Will Hardy', 'latronque@willhardy.com.au'),
+     ('Will Hardy', 'loewengarten@willhardy.com.au'),
 )
-
-MANAGERS = (
-     ('Will Hardy', 'latronque@willhardy.com.au'),
-)
+MANAGERS = ADMINS
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'database',                      # Or path to database file if using sqlite3.
+        'NAME': 'test.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -87,8 +84,8 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '$j3%$vo8^0w)sr@1cnf_-ekri81u#t5#%%7+@4ikygsym+gbk0'
+# Change this in production settings
+SECRET_KEY = 'NOT FOR PRODUCTION'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
